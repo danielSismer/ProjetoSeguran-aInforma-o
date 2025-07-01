@@ -7,7 +7,7 @@
         body {
             margin: 0;
             padding: 0;
-            background-color: #cc0000; /* vermelho */
+            background-color: #cc0000; 
             color: #ff0000;
             font-family: 'Arial Black', sans-serif;
             display: flex;
@@ -19,8 +19,7 @@
             overflow: hidden;
             animation: flash 1s infinite;
         }
-
-        /* camada da imagem com opacidade */
+        
         .background-image {
             position: fixed;
             top: 0;
@@ -31,9 +30,9 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            opacity: 0.2; /* opacidade baixa */
+            opacity: 0.2; 
             z-index: 0;
-            pointer-events: none; /* para não interferir em clique */
+            pointer-events: none; 
         }
 
         h1 {
@@ -41,7 +40,7 @@
             max-width: 90%;
             text-shadow: 2px 2px 8px #000000;
             position: relative;
-            z-index: 1; /* acima da imagem */
+            z-index: 1; 
         }
 
         @keyframes flash {

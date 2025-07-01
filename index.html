@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>ALERTA DE VÍRUS</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #cc0000; /* vermelho */
+            color: #ff0000;
+            font-family: 'Arial Black', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            animation: flash 1s infinite;
+        }
+
+        /* camada da imagem com opacidade */
+        .background-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('IMAGEM.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.2; /* opacidade baixa */
+            z-index: 0;
+            pointer-events: none; /* para não interferir em clique */
+        }
+
+        h1 {
+            font-size: 3em;
+            max-width: 90%;
+            text-shadow: 2px 2px 8px #000000;
+            position: relative;
+            z-index: 1; /* acima da imagem */
+        }
+
+        @keyframes flash {
+            0% { background-color: rgba(204, 0, 0, 0.7); }
+            50% { background-color: rgba(255, 0, 0, 0.9); }
+            100% { background-color: rgba(204, 0, 0, 0.7); }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-image"></div>
+    <h1>⚠️ VÍRUS DETECTADO!<br>SAIA IMEDIATAMENTE DA REDE! ⚠️</h1>
+</body>
+</html>
